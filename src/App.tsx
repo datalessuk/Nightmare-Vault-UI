@@ -1,12 +1,26 @@
 import React from 'react';
 import './App.css';
-import { Button } from '@/components/ui/button';
+import { ThemeProvider } from '@/components/ui/theme-provider';
+import DashBoard from './features/features/components/dashboard/Dashboard';
+import AppLayout from './features/layout/AppLayout';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Movies from './features/features/components/movies/Movies';
+import MovieInfo from './features/features/components/movies/MovieInfo';
 
 function App() {
   return (
-    <div>
-      <Button>Click me</Button>
-    </div>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      {/* <Header /> */}
+      <Router>
+        <AppLayout>
+          <Routes>
+            <Route path="/home" element={<DashBoard />} />
+            <Route path="/movies" element={<Movies />} />
+            <Route path="/film/:id" element={<MovieInfo />} />
+          </Routes>
+        </AppLayout>
+      </Router>
+    </ThemeProvider>
   );
 }
 
