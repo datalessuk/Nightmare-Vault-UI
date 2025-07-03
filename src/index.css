@@ -1,7 +1,12 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@plugin "daisyui";
 
 @custom-variant dark (&:is(.dark *));
+
+.creepster-text {
+  font-family: 'Creepster', cursive;
+}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
