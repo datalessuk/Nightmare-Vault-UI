@@ -1,7 +1,7 @@
 import { useFetchAllFilms } from '@/hooks/useListFilms';
 import { useEffect, useState } from 'react';
 import ListMovieCard from '../cards/ListMovieCard';
-
+import React from 'react';
 import { Button } from '@/components/ui/button';
 import type { IFilmsResponse } from '@/types/tmdb.types';
 

@@ -1,8 +1,14 @@
 import { useFetchNewsTopics } from '@/hooks/useHorrorNews';
 import React from 'react';
 import FeaturedArticleCard from '../cards/FeaturedArticleCard';
+
+import { getAuth } from 'firebase/auth';
 function DashBoard() {
   const articles = useFetchNewsTopics() || [];
+
+  const auth = getAuth();
+  const user = auth.currentUser;
+  console.log(user?.accessToken);
 
   return (
     <div>

@@ -21,6 +21,7 @@ export interface IFilmResponse {
   title: string;
   spoken_languages: languages[];
   poster_path: string;
+  id: string;
 }
 
 interface languages {
