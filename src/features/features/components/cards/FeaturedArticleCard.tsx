@@ -1,6 +1,6 @@
 // import { Card, CardContent } from '@/components/ui/card';
 import type { IFilmsResponse } from '@/types/tmdb.types';
-
+import React from 'react';
 interface FeaturedArticleCardProps {
   article: IFilmsResponse;
 }

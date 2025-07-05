@@ -1,7 +1,7 @@
 import type { IFilmsResponseList } from '@/types/tmdb.types';
 import fallbackImg from '@/assets/public/fallback.png';
 import { useNavigate } from 'react-router-dom';
-
+import React from 'react';
 interface ListMovieCardProps {
   film: IFilmsResponseList;
 }
@@ -19,7 +19,10 @@ export function ListMovieCard({ film }: ListMovieCardProps) {
   };
 
   return (
-    <div onClick={() => openFilm(film?.id)} className="max-w-48 mx-auto">
+    <div
+      onClick={() => openFilm(film?.id)}
+      className="max-w-48 mx-auto cursor-pointer"
+    >
       <div className="bg-white  overflow-hidden">
         <figure className="w-full transition overflow-hidden">
           <img

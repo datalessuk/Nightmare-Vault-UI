@@ -9,6 +9,7 @@ import {
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
 import { Link } from 'react-router-dom';
+import { Bookmark } from 'lucide-react';
 
 function Header() {
   return (
@@ -44,6 +45,18 @@ function Header() {
                     <Link to="/streaming">Streaming Now</Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <Link
+                      to="/watchlist"
+                      className="flex-row items-center gap-2"
+                    >
+                      <Bookmark className="w-4 h-4" />
+                      <span>Watchlist</span>
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
                     {/* <Link href="/docs">TV Shows</Link> */}
